@@ -1,0 +1,2 @@
+# was: 192.168.86.198
+curl -i -X POST -d "$@" http://node-2a5ff4.lan/eval
