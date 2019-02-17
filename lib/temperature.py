@@ -53,7 +53,7 @@ class Limits:
             self.min_c = convert_f_to_c(min)
             self.max_c = convert_f_to_c(max)
         else:
-            raise ValueError(f'Do not understand temperature units: {units}')
+            raise ValueError('Do not understand temperature units: {0}'.format(units))
     def is_acceptable(self, temp, units='c'):
         units = units.strip().lower()
         if units == 'c':
@@ -61,5 +61,5 @@ class Limits:
         elif units == 'f':
             temp = convert_f_to_c(temp)
         else:
-            raise ValueError(f'Do not understand temperature units: {units}')
+            raise ValueError('Do not understand temperature units: {0}'.format(units))
         return temp <= self.max_c and temp >= self.min_c
