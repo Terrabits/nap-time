@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-./post 'gpio.write(2, gpio.HIGH)'
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+"$DIR/post" 'gpio.write(2, gpio.HIGH)'
