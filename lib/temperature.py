@@ -38,7 +38,7 @@ class DS18B20Sensor:
         return int(output[t_eq_pos+2:].strip()) / 1000.0
     def read_f(self):
         temp_c = self.read_c()
-        if not temp_c:
+        if temp_c == None:
             return None
         return convert_c_to_f(temp_c)
 
